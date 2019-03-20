@@ -3,18 +3,16 @@ import './ProductPage.css';
 import Title from '../../components/title/Title';
 import ProductDetails from '../../components/productDetails/ProductDetails';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
-import { mapContexts } from '../../context/withContext';
-import { ProductsContext } from '../../context/ProductsContext';
+import products from './../../data/products.json';
 
 class ProductPage extends Component {
     render() {
         const {
-            products,
             match: {
                 params: { id },
             }
         } = this.props;
-        const product = products.getById(+id);
+        const product = products.productList.find((product) => product.id === +id);
 
         return (
             <div className="ProductPage">
@@ -36,6 +34,4 @@ class ProductPage extends Component {
     }
 }
 
-export default mapContexts({
-    products: ProductsContext,
-})(ProductPage);
+export default ProductPage;

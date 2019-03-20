@@ -6,11 +6,9 @@ import Header from '../../components/header/Header';
 import SearchInput from '../../components/searchInput/SearchInput';
 import CartStatus from '../../components/cartStatus/CartStatus';
 import Container from '../../components/container/Container';
-import {mapContexts} from '../../context/withContext';
-import {ProductsContext} from '../../context/ProductsContext';
 import Link from '../../components/link/Link';
 
-const PageHeader = ({ product, history }) => (
+const PageHeader = ({ history }) => (
     <Header>
         <Container>
             <Row type='flex' justify='space-between' align='middle'>
@@ -44,6 +42,4 @@ const PageHeader = ({ product, history }) => (
     </Header>
 );
 
-export default mapContexts({
-    product: ProductsContext,
-})(withRouter(PageHeader));
+export default withRouter(PageHeader);

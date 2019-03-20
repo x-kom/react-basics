@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import Title from '../../components/title/Title';
 import ProductList from '../../components/productList/ProductList';
 import './ListingPage.css';
-import { mapContexts } from '../../context/withContext';
-import { ProductsContext } from '../../context/ProductsContext';
+import products from './../../data/products.json';
 
 class ListingPage extends Component {
     render() {
-        const { products } = this.props;
-        const { list } = products;
+        const list = products.productList;
 
         return (
             <div className="ListingPage">
@@ -19,6 +17,4 @@ class ListingPage extends Component {
     }
 }
 
-export default mapContexts({
-    products: ProductsContext,
-})(ListingPage);
+export default ListingPage;

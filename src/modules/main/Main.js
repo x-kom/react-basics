@@ -7,17 +7,14 @@ import AppRouter from '../router/AppRouter';
 import Wrapper from '../wrapper/Wrapper';
 import PageHeader from '../pageHeader/PageHeader';
 import Container from '../../components/container/Container';
-import { ProductsProvider } from '../../context/ProductsContext';
 
 const Main = () => (
     <Wrapper>
-        <ProductsProvider>
-            <Container>
-                <AppRouter>
-                    <PageHeader />
-                </AppRouter>
-            </Container>
-        </ProductsProvider>
+        <Container>
+            <AppRouter>
+                <PageHeader />
+            </AppRouter>
+        </Container>
     </Wrapper>
 );
 

@@ -3,16 +3,11 @@ import './BasketPage.css';
 import Title from '../../components/title/Title';
 import SummaryBox from '../../components/summaryBox/SummaryBox';
 import BasketProductList from '../../components/basketProductList/BasketProductList';
-import { mapContexts } from '../../context/withContext';
-import { ProductsContext } from '../../context/ProductsContext';
+import products from './../../data/products.json';
 
 class BasketPage extends Component {
     render() {
-        const {
-            products,
-        } = this.props;
-
-        const list = products.list.map((product) => {
+        const list = products.productList.map((product) => {
             product.count = 1;
             return product;
         });
@@ -27,6 +22,4 @@ class BasketPage extends Component {
     }
 }
 
-export default mapContexts({
-    products: ProductsContext,
-})(BasketPage);
+export default BasketPage;
