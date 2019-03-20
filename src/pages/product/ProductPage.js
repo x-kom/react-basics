@@ -5,12 +5,10 @@ import ProductDetails from '../../components/productDetails/ProductDetails';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
 import { mapContexts } from '../../context/withContext';
 import { ProductsContext } from '../../context/ProductsContext';
-import { CartContext } from '../../context/CartContext';
 
 class ProductPage extends Component {
     render() {
         const {
-            cart,
             products,
             match: {
                 params: { id },
@@ -28,7 +26,7 @@ class ProductPage extends Component {
                             price={product.price}
                             description={product.description}
                             rating={product.rating}
-                            onAddToBasket={() => cart.add(product.id)}
+                            onAddToBasket={() => alert('Dodano!')}
                         />
                     </>
                 )}
@@ -40,5 +38,4 @@ class ProductPage extends Component {
 
 export default mapContexts({
     products: ProductsContext,
-    cart: CartContext,
 })(ProductPage);

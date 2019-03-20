@@ -7,11 +7,10 @@ import SearchInput from '../../components/searchInput/SearchInput';
 import CartStatus from '../../components/cartStatus/CartStatus';
 import Container from '../../components/container/Container';
 import {mapContexts} from '../../context/withContext';
-import {CartContext} from '../../context/CartContext';
 import {ProductsContext} from '../../context/ProductsContext';
 import Link from '../../components/link/Link';
 
-const PageHeader = ({ cart, product, history }) => (
+const PageHeader = ({ product, history }) => (
     <Header>
         <Container>
             <Row type='flex' justify='space-between' align='middle'>
@@ -37,7 +36,7 @@ const PageHeader = ({ cart, product, history }) => (
                     md={{ order: 3, span: 5 }}
                 >
                     <Link to="/basket">
-                        <CartStatus count={cart.count()} value={product.sumPrice(cart.productIds)} />
+                        <CartStatus count={0} value={0} />
                     </Link>
                 </Col>
             </Row>
@@ -46,6 +45,5 @@ const PageHeader = ({ cart, product, history }) => (
 );
 
 export default mapContexts({
-    cart: CartContext,
     product: ProductsContext,
 })(withRouter(PageHeader));

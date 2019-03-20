@@ -5,25 +5,23 @@ import SummaryBox from '../../components/summaryBox/SummaryBox';
 import BasketProductList from '../../components/basketProductList/BasketProductList';
 import { mapContexts } from '../../context/withContext';
 import { ProductsContext } from '../../context/ProductsContext';
-import { CartContext } from '../../context/CartContext';
 
 class BasketPage extends Component {
     render() {
         const {
             products,
-            cart,
         } = this.props;
 
-        const list = products.getByIds(cart.productIds).map((product) => {
-            product.count = cart.productIds[product.id];
+        const list = products.list.map((product) => {
+            product.count = 1;
             return product;
         });
 
         return (
             <div className="BasketPage">
                 <Title title="Twój koszyk" />
-                <BasketProductList list={list} onRemoveFromBasket={cart.remove} />
-                <SummaryBox className="BasketPage__SummaryBox" price={products.sumPrice(cart.productIds)} />
+                <BasketProductList list={list} onRemoveFromBasket={() => alert('Usunięto!')} />
+                <SummaryBox className="BasketPage__SummaryBox" price={0} />
             </div>
         );
     }
@@ -31,5 +29,4 @@ class BasketPage extends Component {
 
 export default mapContexts({
     products: ProductsContext,
-    cart: CartContext,
 })(BasketPage);
