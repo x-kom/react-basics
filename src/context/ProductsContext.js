@@ -7,16 +7,6 @@ export class ProductsProvider extends React.Component {
     state = {
         list: [...products.productList],
 
-        find: (searchText) => (
-            this.state.list.filter((product) => {
-                return (
-                    String(product.id) === searchText
-                    || product.title.toLocaleLowerCase().search(searchText.toLocaleLowerCase()) !== -1
-                    || product.description.toLocaleLowerCase().search(searchText.toLocaleLowerCase()) !== -1
-                );
-            })
-        ),
-
         set: (list) => {
             this.setState({ list });
         },

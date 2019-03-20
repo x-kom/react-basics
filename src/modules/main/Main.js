@@ -8,21 +8,18 @@ import Wrapper from '../wrapper/Wrapper';
 import PageHeader from '../pageHeader/PageHeader';
 import Container from '../../components/container/Container';
 import { ProductsProvider } from '../../context/ProductsContext';
-import { SearchProvider } from '../../context/SearchContext';
 import { CartProvider } from '../../context/CartContext';
 
 const Main = () => (
     <Wrapper>
         <ProductsProvider>
-            <SearchProvider>
-                <CartProvider>
-                    <Container>
-                        <AppRouter>
-                            <PageHeader />
-                        </AppRouter>
-                    </Container>
-                </CartProvider>
-            </SearchProvider>
+            <CartProvider>
+                <Container>
+                    <AppRouter>
+                        <PageHeader />
+                    </AppRouter>
+                </Container>
+            </CartProvider>
         </ProductsProvider>
     </Wrapper>
 );

@@ -6,13 +6,12 @@ import Header from '../../components/header/Header';
 import SearchInput from '../../components/searchInput/SearchInput';
 import CartStatus from '../../components/cartStatus/CartStatus';
 import Container from '../../components/container/Container';
-import {SearchContext} from '../../context/SearchContext';
 import {mapContexts} from '../../context/withContext';
 import {CartContext} from '../../context/CartContext';
 import {ProductsContext} from '../../context/ProductsContext';
 import Link from '../../components/link/Link';
 
-const PageHeader = ({ search, cart, product, history }) => (
+const PageHeader = ({ cart, product, history }) => (
     <Header>
         <Container>
             <Row type='flex' justify='space-between' align='middle'>
@@ -30,7 +29,7 @@ const PageHeader = ({ search, cart, product, history }) => (
                     sm={{ order: 2, span: 10 }}
                     md={{ order: 2, span: 13 }}
                 >
-                    <SearchInput onChange={search.set} value={search.searchText} onEnterPress={() => history.push('/')} />
+                    <SearchInput onChange={undefined} value={undefined} onEnterPress={() => history.push('/')} />
                 </Col>
                 <Col
                     xs={{ order: 2, span: 12 }}
@@ -47,7 +46,6 @@ const PageHeader = ({ search, cart, product, history }) => (
 );
 
 export default mapContexts({
-    search: SearchContext,
     cart: CartContext,
     product: ProductsContext,
 })(withRouter(PageHeader));

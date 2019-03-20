@@ -5,12 +5,11 @@ import './ListingPage.css';
 import { mapContexts } from '../../context/withContext';
 import { ProductsContext } from '../../context/ProductsContext';
 import { CartContext } from '../../context/CartContext';
-import { SearchContext } from '../../context/SearchContext';
 
 class ListingPage extends Component {
     render() {
-        const { products, cart, search } = this.props;
-        const list = products.find(search.searchText);
+        const { products, cart } = this.props;
+        const { list } = products;
 
         return (
             <div className="ListingPage">
@@ -24,5 +23,4 @@ class ListingPage extends Component {
 export default mapContexts({
     products: ProductsContext,
     cart: CartContext,
-    search: SearchContext,
 })(ListingPage);
