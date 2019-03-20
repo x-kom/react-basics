@@ -5,16 +5,12 @@ import './main.css';
 import 'antd/dist/antd.css';
 import AppRouter from '../router/AppRouter';
 import Wrapper from '../wrapper/Wrapper';
-import PageHeader from '../pageHeader/PageHeader';
 import Container from '../../components/container/Container';
-import ListingPage from '../../pages/listing/ListingPage';
 
 const Main = () => (
     <Wrapper>
         <Container>
             <AppRouter>
-                <PageHeader />
-                <ListingPage />
             </AppRouter>
         </Container>
     </Wrapper>
