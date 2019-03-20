@@ -1,0 +1,13 @@
+.NoMatch {
+    text-align: center;
+}
+
+.NoMatch__errorCode {
+    font-size: 100px;
+    color: var(--darker-gray);
+}
+
+.NoMatch__header {
+    font-size: 20px;
+    color: var(--black);
+}

@@ -1,0 +1,17 @@
+.BasketProductList__Item {
+    margin-bottom: 15px;
+}
+
+.BasketProductList__EmptyMessage {
+    text-align: center;
+    font-size: 16px;
+    padding: 50px 20px;
+    border-radius: 10px;
+    background: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+    .BasketProductList__Item {
+        margin-bottom: 20px;
+    }
+}

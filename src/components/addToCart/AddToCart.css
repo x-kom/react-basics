@@ -1,0 +1,11 @@
+.AddToCart {
+    text-align: right;
+}
+
+.AddToCart__Price {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 16px;
+}

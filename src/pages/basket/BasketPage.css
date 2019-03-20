@@ -1,0 +1,12 @@
+.BasketPage {
+}
+
+.BasketPage__SummaryBox {
+    padding-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .BasketPage__SummaryBox {
+        padding-top: 20px;
+    }
+}

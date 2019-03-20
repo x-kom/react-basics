@@ -1,0 +1,19 @@
+.CartStatus {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    color: var(--black);
+}
+
+.CartStatus__Icon {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.CartStatus__Value {
+    font-weight: bold;
+}
+
+.CartStatus__Count {
+    font-size: small;
+}

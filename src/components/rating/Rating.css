@@ -1,0 +1,7 @@
+.Rating {
+    font-size: 12px;
+    line-height: 8px;
+    font-weight: bold;
+    color: var(--darker-gray);
+    margin-bottom: 8px;
+}

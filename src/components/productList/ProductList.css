@@ -1,0 +1,16 @@
+.ProductList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+.ProductList__Element {
+    padding: 8px;
+    width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .ProductList__Element {
+        width: 50%;
+    }
+}

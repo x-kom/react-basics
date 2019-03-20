@@ -1,0 +1,21 @@
+.Title {
+    font-size: 36px;
+    line-height: 38px;
+    color: var(--black);
+    margin-bottom: 16px;
+    padding-top: 34px;
+}
+
+.Title__InfoText {
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--darker-gray);
+    margin-left: 4px;
+}
+
+@media screen and (min-width: 992px) {
+    .Title {
+        margin-bottom: 32px;
+        padding-top: 68px;
+    }
+}

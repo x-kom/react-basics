@@ -1,0 +1,23 @@
+.Header__Content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 16px 0;
+    box-shadow: 0 0 4px var(--mid-gray);
+    background-color: var(--white);
+}
+
+.Header,
+.Header__Content {
+    height: 110px;
+}
+
+@media screen and (min-width: 576px) {
+    .Header,
+    .Header__Content {
+        padding: 16px;
+        height: 68px;
+    }
+}

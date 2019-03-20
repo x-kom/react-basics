@@ -1,0 +1,17 @@
+.SummaryBox {
+    font-size: 24px;
+    line-height: 26px;
+    text-align: right;
+    color: var(--black);
+}
+
+.SummaryBox__Price {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .SummaryBox {
+        font-size: 36px;
+        line-height: 38px;
+    }
+}
